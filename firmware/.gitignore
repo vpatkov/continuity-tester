@@ -1,0 +1,5 @@
+*.d
+*.o
+*.lss
+*.elf
+tones.hpp

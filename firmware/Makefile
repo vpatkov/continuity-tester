@@ -1,0 +1,65 @@
+TARGET = ct
+
+CXX_SOURCES = $(wildcard *.cpp)
+
+MCU = atmega88pa
+MCU_AVRDUDE = m88pa
+F_CPU = 1e6
+FUSES = -U lfuse:w:0x62:m -U hfuse:w:0xdf:m -U efuse:w:0xf9:m
+
+CXX = avr-g++
+OBJCOPY = avr-objcopy
+OBJDUMP = avr-objdump
+SIZE = avr-size -C --mcu=$(MCU)
+AVRDUDE = avrdude -c usbasp -P usb -p $(MCU_AVRDUDE) -B 125kHz
+
+CXXFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU)
+CXXFLAGS += -c -std=c++17
+CXXFLAGS += -Wall -Wextra -Woverloaded-virtual -Wcast-align -Wundef
+CXXFLAGS += -Wlogical-op -Wredundant-decls -Wshadow -Wsuggest-override
+CXXFLAGS += -O3 -flto -fshort-enums
+CXXFLAGS += -fno-exceptions -funsigned-bitfields
+CXXFLAGS += -g -gdwarf-2
+CXXFLAGS += -MMD -MP
+
+LDFLAGS = -mmcu=$(MCU)
+LDFLAGS += -O3 -flto -Wno-stringop-overflow
+LDFLAGS += -g
+
+.PHONY: all listing clean program-flash program-fuses size
+
+all: $(TARGET).hex size
+
+listing: $(TARGET).lss
+
+%.hex: %.elf
+	$(OBJCOPY) -O ihex -j .data -j .text $< $@
+
+%.lss: %.elf
+	$(OBJDUMP) -h -d -S -z $< >$@
+
+%.elf: %.o
+	$(CXX) $(LDFLAGS) -o $@ $^
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $<
+
+tones.hpp: gen-tones.py
+	python3 gen-tones.py $(F_CPU) >$@
+
+clean:
+	rm -f *.o *.d *.elf *.lss tones.hpp
+
+program-flash: $(TARGET).hex
+	$(AVRDUDE) -U flash:w:$<:i
+
+program-fuses:
+	$(AVRDUDE) $(FUSES)
+
+size: $(TARGET).elf
+	$(SIZE) $<
+
+$(TARGET).elf: $(CXX_SOURCES:.cpp=.o)
+
+ct.o: tones.hpp
+-include $(CXX_SOURCES:.cpp=.d)
