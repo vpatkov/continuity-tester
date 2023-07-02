@@ -1513,8 +1513,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a780f5b2-b8cb-4857-94e8-ce5c0c554a9e)
   )
-  (text "Resistors 5% 0.1W unless otherwise noted.\nCapacitors X7R 50V unless otherwise noted."
-    (at 177.8 180.34 0)
+  (text "1. Resistors 5% 0.1W unless otherwise noted.\n2. Capacitors X7R 50V unless otherwise noted.\n3. U2 can be replaced with another auto-zero single-supply op-amp,\n   taking into account its speed, power consumption, and offset voltage.\n   E.g. TSZ121, ISL28133, MCP6V71, OPA333, COS1333-A, COS8551-A.\n"
+    (at 177.8 179.07 0)
     (effects (font (size 1.5 1.5)) (justify left bottom))
     (uuid ebcc2083-3679-4374-83a7-6fae9889723c)
   )
