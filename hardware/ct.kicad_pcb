@@ -1672,7 +1672,7 @@
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 96012019-8410-4564-9249-cd164ecb94dc)
     )
-    (fp_text value "TLV333" (at 0 2.4) (layer "F.Fab")
+    (fp_text value "MCP6V61" (at 0 2.4) (layer "F.Fab")
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 03f6891b-9c21-4dfb-a9f1-eeb9357296b8)
     )

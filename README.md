@@ -2,9 +2,9 @@
 
 ![](photos/assembled.png)
 
-Yet another continuity tester. Digital multimeters are very good at presice
-measurements, but usually not so good at continuity testing. This little
-tester solves the problem.
+Ultra low-voltage and fast continuity tester. Digital multimeters are very good
+at presice measurements, but usually not so good at continuity testing. This
+little tester solves the problem.
 
 - **Open terminals voltage is 100 mV, short terminals current is 100 μA.**
   Suitable for in-circuit measurement (keep p-n juntions closed) without the
@@ -14,7 +14,7 @@ tester solves the problem.
   Audible feedback avoid moving your viewpoint. Discrete chromatic steps make
   it easier to determine resistance by ear. The range is 0–10 Ω with 1 Ω steps.
 
-- **Detects shorts of 2 ms with ensured minimal beep duration of 100 ms.**
+- **Detects shorts of 1 ms with ensured minimal beep duration of 100 ms.**
   Suitable for finding connections by sweeping and brushing without the risk
   of missing a beep. Gold-plated probes are recommended.
 

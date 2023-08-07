@@ -23,5 +23,5 @@
 "22","SW1","1","Tactile Button","Button_Switch_THT:SW_PUSH_6mm","","Height 15mm"
 "23","TP1, TP2","2","TestPoint","TestPoint:TestPoint_Loop_D3.50mm_Drill0.9mm_Beaded","",""
 "24","U1","1","TLV431","Package_TO_SOT_SMD:SOT-23","",""
-"25","U2","1","TLV333","Package_TO_SOT_SMD:SOT-23-5","",""
+"25","U2","1","MCP6V61","Package_TO_SOT_SMD:SOT-23-5","",""
 "26","U3","1","ATmega88PA-A","Package_QFP:TQFP-32_7x7mm_P0.8mm","",""

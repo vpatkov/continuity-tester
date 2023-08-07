@@ -1513,7 +1513,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a780f5b2-b8cb-4857-94e8-ce5c0c554a9e)
   )
-  (text "1. Resistors 5% 0.1W unless otherwise noted.\n2. Capacitors X7R 50V unless otherwise noted.\n3. U2 can be replaced with another auto-zero single-supply op-amp,\n   taking into account its speed, power consumption, and offset voltage.\n   E.g. TSZ121, ISL28133, MCP6V71, OPA333, COS1333-A, COS8551-A.\n"
+  (text "1. Resistors 5% 0.1W unless otherwise noted.\n2. Capacitors X7R 50V unless otherwise noted.\n3. U2 can be replaced with another auto-zero single-supply op-amp,\n   taking into account its speed, power consumption, and offset voltage.\n   E.g. TLV333, ISL28133, TSZ121, COS1333-A, COS8551-A.\n"
     (at 177.8 179.07 0)
     (effects (font (size 1.5 1.5)) (justify left bottom))
     (uuid ebcc2083-3679-4374-83a7-6fae9889723c)
@@ -1753,7 +1753,7 @@
     (property "Reference" "U2" (at 97.155 86.995 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "TLV333" (at 99.06 88.9 0)
+    (property "Value" "MCP6V61" (at 100.33 88.9 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 92.71 97.79 0)
@@ -1762,11 +1762,11 @@
     (property "Datasheet" "~" (at 95.25 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid cad65bb5-c1eb-4ac0-a374-f448446bfafc))
-    (pin "5" (uuid f80f0966-57e6-4ea3-86bc-c47eee318758))
-    (pin "1" (uuid 7a5508f6-8e78-4f2f-a4f5-005f7c06f2fd))
-    (pin "3" (uuid 3d640bb9-2cb5-4d16-b68b-20f5213db356))
-    (pin "4" (uuid 92cc87f6-2e53-43be-8afa-4064c2748a69))
+    (pin "2" (uuid d4279421-b1ed-4173-a9f3-583f0e1e45d9))
+    (pin "5" (uuid 04d7a672-bcb5-4e45-84d5-16199db35bdb))
+    (pin "1" (uuid b46cc443-2cfd-4cf1-a949-5a5f69540049))
+    (pin "3" (uuid 799514bd-83d2-44e0-b4a4-e012cd8a8cc1))
+    (pin "4" (uuid bddd0e53-8f9a-4536-a498-9c89f77d2b67))
     (instances
       (project "ct"
         (path "/b6242731-dc1d-4d55-82cb-38d098140970"
