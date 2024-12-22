@@ -3,7 +3,7 @@
 ![](photos/assembled.png)
 
 Ultra low-voltage and fast continuity tester. Digital multimeters are very good
-at presice measurements, but usually not so good at continuity testing. This
+at precise measurements, but usually not so good at continuity testing. This
 little tester solves the problem.
 
 - **Open terminals voltage is 100 mV, short terminals current is 100 μA.**
