@@ -12,5 +12,8 @@ _saved_*
 *.net
 *.kicad_prl
 *.xml
+*.lck
+*~
+~*
 fp-info-cache
 gerbers/
