@@ -26,12 +26,6 @@ little tester solves the problem.
   Consumes 0.7 mA when on (+0.3 mA when beeping), 0.1 μA when off. After 3
   minites of inactivity, the tester switched off automatically.
 
-- **Test points for measuring the amplifed resistance signal.**
-  In case you want more precise measurements, connect a voltmeter to the
-  dedicated test points. This tester isn't a calibrated ohmmeter, so this
-  should be used only for relative measurements. Voltage scale on the test
-  points is approx. 100 mV/Ω. An analog voltmeter is recommended here.
-
 - **±30 V input protection.**
   The tester should not be used on a powered circuit, but just in case.
   Also saves against charged capacitors. The input impedance of the tester is
